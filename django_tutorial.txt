@@ -1,0 +1,27 @@
+1-New virtual create
+
+C:\Users\Name\django> C:\Python34\python -m venv myvenv
+-myvenv name
+
+2-Start virtual
+C:\Users\Name\django> myvenv\Scripts\activate.bat
+
+3-Install django
+(myvenv) ~$ pip install django==1.8
+
+4-Указываем место установки дл django
+(myvenv) C:\Users\Name\django> django-admin startproject mysite .
+
+5-Ставим базу (где расположен файл manage.py)
+(myvenv) ~/django$ python manage.py migrate
+
+6-Запускаем сервер 
+(myvenv) ~/django$ python manage.py runserver
+или
+(myvenv) ~/django$ python manage.py runserver 0:8000
+заходим на сайт http://127.0.0.1:8000/
+
+Запилить пользователя 
+(myvenv) ~/django$python manage.py createsuperuser
+Файл настроек
+mysite/settings.py
